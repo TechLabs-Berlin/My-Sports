@@ -9,7 +9,7 @@ import { checkLoggedIn } from './util/session';
 
 const renderApp = preloadedState => {
     const store = configureStore(preloadedState);
-      
+
     ReactDOM.render(
         <Provider store={store}>
             <App />

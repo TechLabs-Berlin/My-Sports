@@ -13,20 +13,21 @@ import NotFoundPage from './Pages/NotFoundPage'
 import { AuthRoute, ProtectedRoute } from "./util/route";
 import Header from './components/Header';
 
+
 function App() {
   return <BrowserRouter>
     <Header />
     <Switch>
-      <AuthRoute path="/login" component={LoginPage}/>
-      <AuthRoute path="/register" component={RegisterPage}/>
-      <ProtectedRoute path="/dashboard" component={DashboardPage}/>
-      <ProtectedRoute path="/find-event" component={FindEventPage}/>
-      <ProtectedRoute path="/create-event" component={CreateEventPage}/>
-      <ProtectedRoute path="/event/:id/chat" component={EventChatPage}/>
-      <ProtectedRoute path="/event/:id" component={EventPage}/>
-      <ProtectedRoute path="/profile/:id" component={ProfilePage}/>
-      <ProtectedRoute path="/edit-profile" component={EditProfilePage}/>
-      <Route path="*" component={NotFoundPage}/>
+      <AuthRoute path="/login" component={LoginPage} />
+      <AuthRoute path="/register" component={RegisterPage} />
+      <ProtectedRoute path="/dashboard" component={DashboardPage} />
+      <ProtectedRoute path="/find-event" component={FindEventPage} />
+      <ProtectedRoute path="/create-event" component={CreateEventPage} />
+      <ProtectedRoute path="/event/:id/chat" component={EventChatPage} />
+      <ProtectedRoute path="/event/:id" component={EventPage} />
+      <ProtectedRoute path="/profile/:id" component={ProfilePage} />
+      <ProtectedRoute path="/edit-profile" component={EditProfilePage} />
+      <Route path="*" component={NotFoundPage} />
     </Switch>
   </BrowserRouter>
 }
