@@ -8,10 +8,6 @@
     "@testing-library/user-event": "^12.1.10",
     "axios": "^0.21.0",
     "bootstrap": "^5.0.0-beta1",
-<<<<<<< HEAD
-    "date-fns": "^2.16.1",
-=======
->>>>>>> 58d633dfdbc06f72a549c6a30703e4786d896170
     "moment": "^2.29.1",
     "react": "^17.0.1",
     "react-datepicker": "^3.3.0",

@@ -19,6 +19,7 @@ const mapDispatchToProps = dispatch => ({
 
 
 const RegisterPage = ({ errors, signup }) => {
+    const [error, setError] = useState('');
 
     const registerUser = (e) => {
         e.preventDefault();
@@ -32,7 +33,18 @@ const RegisterPage = ({ errors, signup }) => {
             location: e.target.location.value,
             lastName: e.target.lastName.value
         }
-        signup(user);
+
+        if(e.target.email.value !== e.target.email_confirm.value){
+            setError(`email doesn't match`);
+        } 
+
+        else if(e.target.password.value !== e.target.password_confirm.value){
+            setError(`password doesn't match`);
+        } else {
+            setError('');
+            signup(user);
+        }
+
     }
 
     const [startDate, setStartDate] = useState(null);
@@ -54,8 +66,16 @@ const RegisterPage = ({ errors, signup }) => {
                     <input type="email" id="email" name="email" placeholder="email" required />
                 </div>
                 <div>
+                <label htmlFor="confirm_email">Confirm Email:</label>
+                <input type="email" id="email_confirm" name="email_confirm" placeholder="confirm email" required />
+                </div>
+                <div>
                     <label htmlFor="password">Password (8 characters minimum, 12 characters maximum. Must contain atleast 1 letter and 1 number):</label>
                     <input type="password" id="password" name="password" placeholder="password" minLength="8" pattern="(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d@$!%*?&]{8,12}" required />
+                </div>
+                <div>
+                <label htmlFor="password_confirmation">Confirm Password:</label>
+                <input type="password" id="password_confirm" name="password_confirm" placeholder="confirm password" required />
                 </div>
                 <div>
                     <label htmlFor="name">First Name:</label>
@@ -118,6 +138,7 @@ const RegisterPage = ({ errors, signup }) => {
                     <input type="checkbox" id="checkbox" required />
                 </div>
                 <button>Register Now</button>
+                {error && <p>{error}</p>}
             </form>
         </div>
     )
