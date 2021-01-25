@@ -1,0 +1,19 @@
+.sport-titles {
+    color: $dark-grey;
+    margin-top: 5px;
+    margin-bottom: 0;
+}
+
+.sport-image-select {
+    background-color: $silver;
+    border: 2px solid $silver;
+    border-radius: 50% 20% / 10% 40%;
+}
+
+.star-ratings {
+    margin-bottom: 1.5em;
+}
+
+.toggle-stars {
+    visibility: hidden;
+}

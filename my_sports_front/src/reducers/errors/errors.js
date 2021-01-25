@@ -11,5 +11,3 @@ export default (state = "", action) => {
       return state;
   }
 };
-
-//need to fix and implement

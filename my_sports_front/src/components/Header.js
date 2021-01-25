@@ -1,14 +1,14 @@
 import { session } from 'passport';
 import React from 'react';
-import { NavLink } from 'react-router-dom'
 
 
-const Header = () => (
+const Header = ({ title }) => (
     <header>
-        <NavLink exact={true} to="/dashboard" activeClassName="is-active">Home</NavLink>
-        <NavLink exact={true} to="/find-event" activeClassName="is-active">Find Event</NavLink>
-        <NavLink exact={true} to={"/profile/" + session.userId} activeClassName="is-active">Profile</NavLink>
-        <NavLink exact={true} to="/register" activeClassName="is-active">Register</NavLink>
+        <nav id="navbar">
+        <i className="material-icons md-36" id="menu-icon">menu</i>
+        <h2 id="logo">{title}</h2>
+        <i className="material-icons-outlined md-36" id="filter-icon">filter_alt</i>
+        </nav>
     </header>
 );
 

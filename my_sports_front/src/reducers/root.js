@@ -6,10 +6,12 @@ import filters from './event/filter';
 import socket from './socket/socket';
 import message from './messages/message';
 import resetPassword from './resetPassword/resetPassword';
+import success from './success/success';
 
 export default combineReducers({
   session,
   errors,
+  success,
   event,
   filters,
   socket, //might not need

@@ -1,4 +1,4 @@
-.chatroom {
+/* .chatroom {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -52,7 +52,7 @@ section {
 
 #messages li:nth-child(odd) { 
     background: #eee; 
-}
+} */
 
 
 .modal {
@@ -100,4 +100,3 @@ section {
       .close:after {
         transform: rotate(-45deg);
       }
-

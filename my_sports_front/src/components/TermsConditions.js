@@ -8,7 +8,7 @@ const TermsConditions = ({ id = "modal", onClose = () => { }, children }) => {
 
     return (
         <div id={id} className="modal" onClick={handleOutSideClick} >
-            <div className="container">
+            <div className="modal-container">
                 <button className="close" onClick={onClose} />
                 <div className="content">{children}</div>
             </div>

@@ -52,8 +52,12 @@ const CreateEventPage = ({ session, createEvent, history }) => {
                     <select id="sport" name="sport" required>
                         <option value="">Please select one</option>
                         <option value="basketball">Basketball</option>
-                        <option value="beach volleyball">Beach Volleyball</option>
+                        <option value="bouldering">Bouldering</option>
                         <option value="football">Football</option>
+                        <option value="pingpong">Ping Pong</option>
+                        <option value="running">Running</option>
+                        <option value="volleyball">Volleyball</option>
+                        <option value="yoga">Yoga</option>
                     </select>
                 </div>
                 <div>

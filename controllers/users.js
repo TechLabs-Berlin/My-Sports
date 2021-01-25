@@ -10,11 +10,11 @@ module.exports.newUser = async(req, res, next) => {
         const { email, username, password, name, dob, gender, location, lastName } = req.body;
         const emailCheck = await User.findOne({ email });
         if (emailCheck) {
-            res.status(401).send({ message: 'The email address entered is already registered'});
+            res.status(401).send({ message: 'email taken'});
         } else {
             const usernameCheck = await User.findOne({ username });
             if (usernameCheck) {
-                res.status(401).send({ message: 'The username entered is already registered'});
+                res.status(401).send({ message: 'username taken'});
             } else {
                 const newUser = new User({email, username, name, dob, gender, location, lastName});
                 const registeredUser = await User.register(newUser, password);
@@ -102,6 +102,60 @@ module.exports.saveNewPassword = async(req, res, next) => {
         await user.save();
         res.send({ message: 'password updated' });
     } catch (err) {
+        res.status(400).send({ message: 'Something went wrong!' });
+    }
+}
+
+module.exports.getUserInfo = async(req, res, next) => {
+    try {
+        const { id } = req.params;
+        const user = await User.findById(id);
+        if (!user) {
+            res.send('user not found');
+        } else {
+            res.send(user);
+        }
+    } catch (err) {
+        res.status(400).send({ message: 'user not found' })
+    }
+}
+
+module.exports.editUser = async(req, res, next) => {
+    try {
+        const { id, email, username, name, location, lastName, gender, aboutMe } = req.body;
+        const editedUser = {
+            email,
+            username,
+            name,
+            location,
+            lastName,
+            gender,
+            aboutMe
+        }
+        const userUpdate = await User.findByIdAndUpdate(id, editedUser);
+        const sessionUser = helper.sessionizeUser(userUpdate);
+        req.session.user = sessionUser;
+        res.send(sessionUser);
+    } catch(e){
+        res.status(400).send({ message: 'Something went wrong!' });
+    }
+}
+
+module.exports.updateRatings = async(req, res, next) => {
+    try {
+        const { id, volleyballRating, basketballRating, footballRating, boulderingRating, yogaRating, pingpongRating, runningRating } = req.body;
+        const editedUser = {
+            volleyballRating,
+            basketballRating,
+            footballRating,
+            boulderingRating,
+            yogaRating,
+            pingpongRating,
+            runningRating
+        }
+        const userUpdate = await User.findByIdAndUpdate(id, editedUser);
+        res.send('success!');
+    } catch(e){
         res.status(400).send({ message: 'Something went wrong!' });
     }
 }

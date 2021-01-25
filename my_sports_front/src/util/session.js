@@ -1,12 +1,11 @@
 import axios from 'axios';
-import { receiveErrorsFunc } from '../actions/error'; //need to implement somehow for front end error display
 
 export const signup = async user => {
   return await axios
     .post('/api/users', user)
     .catch((error) => {
       if(error.response.data.message){
-      alert(error.response.data.message); //temporary solution
+        return error;
     }})
   };
 

@@ -45,6 +45,9 @@ const eventSchema = new mongoose.Schema({
     active : {
         type: Boolean,
         default: true
+    },
+    about: {
+        type: String
     }
 })
 

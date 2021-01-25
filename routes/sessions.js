@@ -7,7 +7,7 @@ const sessionRouter = express.Router();
 
 sessionRouter.post('', passport.authenticate('local'), async (req, res) => {
     try {
-      const { username, password } = req.body
+      const { username } = req.body
       const user = await User.findOne({ username });
       if (user) {
         // if (user.accountConfirmed) {

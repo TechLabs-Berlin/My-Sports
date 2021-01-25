@@ -4,8 +4,8 @@ import io from 'socket.io-client';
 import { toggleSocket } from '../actions/socket';
 import { getMessagesFunc, saveMessage, clearMessages } from '../actions/message';
 
-const mapStateToProps = ({ event, session, message }) => ({
-  event,
+const mapStateToProps = ({ session, message }) => ({
+  // event,
   session,
   message
 });  
@@ -17,12 +17,12 @@ const mapDispatchToProps = dispatch => ({
   clearMessages: () => dispatch(clearMessages())
 })
 
-const EventChatPage = ({ session, match, message, toggleSocket, getMessagesFunc, saveMessage, clearMessages }) => {
+const EventChatPage = ({ session, match, message, toggleSocket, getMessagesFunc, saveMessage, clearMessages, id, event }) => {
 
-  const { id } = match.params
-  const event = useSelector(state =>
-    state.event.find(event => event._id === id)
-  )
+  // const { id } = match.params
+  // const event = useSelector(state =>
+  //   state.event.find(event => event._id === id)
+  // )
 
   const socket = io('http://localhost:5000');
 
@@ -42,31 +42,31 @@ const EventChatPage = ({ session, match, message, toggleSocket, getMessagesFunc,
     }
   }, [])
 
-    if (!event) {
-        return (
-        <div>
-            <h2>Event not found!</h2>
-        </div>
-        )
-    }
+    // if (!event) {
+    //     return (
+    //     <div>
+    //         <h2>Event not found!</h2>
+    //     </div>
+    //     )
+    // }
 
-    let isMember = false;
-    const memberCheck = event.teammates.filter((teammate) => {
-      const memberMatch = teammate._id.includes(session.userId)
-      return memberMatch
-    })
+    // let isMember = false;
+    // const memberCheck = event.teammates.filter((teammate) => {
+    //   const memberMatch = teammate._id.includes(session.userId)
+    //   return memberMatch
+    // })
 
-    if (memberCheck.length === 1) {
-      isMember = true
-    }
+    // if (memberCheck.length === 1) {
+    //   isMember = true
+    // }
 
-    if (!isMember) {
-        return (
-        <div>
-            <h2>You are not currently signed up for this event</h2>
-        </div>
-        )
-    }
+    // if (!isMember) {
+    //     return (
+    //     <div>
+    //         <h2>You are not currently signed up for this event</h2>
+    //     </div>
+    //     )
+    // }
 
     // socket.on('connect', () => {
     //   console.log('User connected from front end')
@@ -88,18 +88,22 @@ const EventChatPage = ({ session, match, message, toggleSocket, getMessagesFunc,
     }
 
     return (
-        <div>
-            <p>Chat to your teammates</p>
+        <div className="form-box-white">
+          <div className="card" style={{width: 100 + '%'}}>
+            <div className="card-body">
+              <h3 className="event-page-event-title text-muted card-title">Team Chat</h3>
+              <form className="test-form" id="chat-form" onSubmit={emit}>
+                <input placeholder="type a message..." className="test-form-input" name="chatMessage" id="msg" autoComplete="off" /><button className="test-form-button"><i className="pointer material-icons md-18 grey-icon">send</i></button>
+              </form>
+            </div>
             <section>
                 <ul id="messages">
                   {message && message.map((m) => {
-                    return <li><b>{m.user.username}:</b>{m.message}</li>
+                    return <li key={m._id}><b>{m.user.username}: </b>{m.message}</li>
                   })}
                 </ul>
-                <form className="test-form" id="chat-form" onSubmit={emit}>
-                <input className="test-form-input" name="chatMessage" id="msg" autoComplete="off" /><button className="test-form-button">Send</button>
-                </form>
             </section>
+            </div>
         </div>
     )
 }

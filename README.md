@@ -1,30 +1,59 @@
-# My-Sports
+# MySports
 
-Once you pull the file please follow the instructions below to be able to run the prototype.
+MySports is the final group project which was created in order to complete the Berlin TechLabs Bootcamp. The team disciplines included UX/UI design, Web Development, and Data Science. All disciplines were put into practice to develop MySports. MySports is an event creation platform specifically aimed to match users into teams for various sports. Users are matched based on search criteria and filters and then are able to communicate in an integrated event chatroom to discuss details. A deployed version can be found here:
 
-1 - You will first need to have Mongo DB installed on your computer. If you do not please follow the instructions listed here:
-    https://docs.mongodb.com/manual/installation/#mongodb-community-edition-installation-tutorials
+-- Yet To Be Deployed --
 
-    Once you have installed mongo please make sure it works by opening a terminal window and running the command:
-    'mongo'
+### Screenshots
 
-    If the db starts successfully please ignore the next step:
-        If it does not work you may have to complete an extra step of running Mongod. Do so by running the following command:
-        'brew services start mongodb-community@4.4'
+<img width="354" alt="Screenshot 2021-01-19 at 12 21 44" src="https://user-images.githubusercontent.com/70976690/105028291-24222380-5a51-11eb-92e4-71c110e89ace.png"> <img width="351" alt="Screenshot 2021-01-19 at 12 22 25" src="https://user-images.githubusercontent.com/70976690/105028436-503da480-5a51-11eb-97d9-a6d8ee013b4c.png"> <img width="351" alt="Screenshot 2021-01-19 at 12 22 56" src="https://user-images.githubusercontent.com/70976690/105028486-60558400-5a51-11eb-93fd-54e56abdfc2f.png"> <img width="354" alt="Screenshot 2021-01-19 at 12 23 20" src="https://user-images.githubusercontent.com/70976690/105028528-6e0b0980-5a51-11eb-8df2-df56c817dab1.png">
 
-2 - Open a terminal window and cd into the MY-SPORTS directory. Once in, run the following command:
-    'npm install'
+### Project Status
 
-3 - Step 2 will take a while to complete. While that runs open another terminal window and cd into MY-SPORTS/my_sports_front.
-    Once in, run the following command:
-    'yarn'
+The project is still in production. MVP restrictions include: 
+* Event location is restricted to popular Berlin districts.
+* Event type list is restricted to Basketball, Volleyball, Football, Running, Yoga, Table-Tennis, and Bouldering.
+* Data Science matching and optimization added but not implemented yet.
 
-4 - Go back to the previous terminal where you ran 'npm install'. Once the installation process is complete, run command:
-    'node index.js'
-    If everything is functioning properly you should see:
-    'Server listening on 5000'
-    'Mongoose connection open'
+The aim is to remove all mentioned restrictions as future versions are produced. 
 
-5 - Go to the terminal where you ran 'yarn'. Once that is complete, run the command:
-    'yarn start'
-    If everything is functioning properly you will be redirected to your default browser with the app running. 
+### Installation and Setup Instructions
+
+Clone down this repository. You will need node, and npm/yarn installed globally on your machine.
+
+Installation:
+
+`npm install`
+`cd my_sports_front`
+`yarn`
+
+Run:
+
+`node index.js`
+
+Open a new terminal tab and then:
+
+`cd my_sports_front`
+`yarn start`
+
+Please make sure to have MongoDB installed to run locally. Default local port for mongo is 27017.
+
+To Visit App:
+
+localhost:3000/login
+
+### Technologies Used
+
+The technologies implemented in this project include Express, Node, React, Redux, MongoDB, Nodemailer, Socket.io, PassportJS, Axios, MomentJs, Bootstrap, and SCSS. 
+
+### Contributors
+
+* Alex NeuSchafer - UX/UI Design
+* Ashneil Sakhrani - Web Development
+* Barney Riley - UX/UI Design
+* Catia Goncalves - Web Development
+* Jan-Henrik Pot - Data Science
+* Kwame - Web Development *
+* Sam - Data Science
+* Usman - Web Development *
+* Viktoria Repich - UX/UI Design *

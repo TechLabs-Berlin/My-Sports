@@ -10,6 +10,6 @@ export const clearErrors = () => ({
   type: CLEAR_ERRORS
 });
 
-export const receiveErrorsFunc = (payload) => dispatch => {
+export const receiveErrorsFunc = payload => dispatch => {
   return dispatch(receiveErrors(payload))
 }

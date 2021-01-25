@@ -1,0 +1,154 @@
+.login-page-top-space-false {
+    height: 30vh;
+    width: 100%
+}
+
+.login-page-top-space-true {
+    height: 11vh;
+    width: 100%
+}
+
+.top-line {
+    padding-top: 1.5rem;
+    border-top: solid #FBEF4E;
+}
+
+.bottom-line {
+    padding-bottom: 3rem;
+    border-bottom: solid #FBEF4E;
+}
+
+.login-button {
+    margin-top: 10rem;
+    margin-bottom: 2rem;
+    margin-left: 50%;
+    margin-right: 50%;
+    background-color: $yellow;
+    border-radius: 24px;
+    padding-left: 70px;
+    padding-right: 70px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border: 0px;
+    color: $dark-grey;
+    box-shadow: 2px 5px 5px grey;
+}
+
+p.col {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.signup-button {
+    border-radius: 24px;
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-decoration: none;
+    border: solid white;
+    border-width: 2px;
+    appearance: button;
+    color: white;
+    margin-bottom: 30%;
+}
+
+.signup-button:hover {
+    color: white;
+}
+
+.white-font {
+    color: white;
+}
+
+.back-arrow {
+    margin-top: 1rem;
+}
+
+.login-form {
+    background-color: rgba(92, 92, 92, 0.9);
+    margin-top: 4rem;
+}
+
+.login-form input {
+    background: transparent;
+    border: none;
+    border-bottom: solid #FBEF4E;
+    color: $yellow;
+    font-size: 1.2em;
+    padding-left:1em;
+    width: 80%;
+    text-align: center;
+}
+
+#eye {
+    z-index: 100;
+}
+
+.login-form input:focus {
+    outline: none;
+}
+
+.login-form label {
+    padding-bottom: 0.1rem;
+    border-bottom: solid #FBEF4E;
+}
+
+.login-form .username {
+    margin-left: 1rem;
+    padding-top: 3.5rem;
+}
+
+.login-form .password {
+    margin-left: 1rem;
+    padding-top: 4rem;
+    padding-bottom: 5rem;
+}
+
+#login-button {
+    margin-top: 4.9rem;
+    margin-bottom: 4.9rem;
+    margin-left: 30%;
+    background-color: $yellow;
+    border-radius: 24px;
+    padding-left: 70px;
+    padding-right: 70px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border: 0px;
+    color: $dark-grey;
+    box-shadow: 2px 5px 5px grey;
+}
+
+.error-box {
+    position: absolute;
+}
+
+.error-symbol {
+    color: #FF6E33;
+    margin-top: 10px;
+    margin-bottom: 0%;
+    padding-bottom: 0%;
+    margin-left: 45%;
+}
+
+.forgot-password-box {
+    position: absolute;
+    margin-top: 1.5rem;
+
+}
+.forgot-password-paragraph {
+    margin-left: 50%;
+}
+
+.forgot-password-button {
+    color: #81D5FF;
+    border-radius: 24px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    appearance: button;
+    border: solid #81D5FF;
+    border-width: 2px;
+}

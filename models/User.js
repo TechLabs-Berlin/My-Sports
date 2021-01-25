@@ -26,14 +26,45 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: 'Location is required'
     },
+    aboutMe: {
+        type: String,
+    },
     accountConfirmed: {
         type: Boolean,
         default: true
     },
-    favSports: [{
-        sport: String,
-        skill: Number
-    }]
+    volleyballRating: {
+        type: Number,
+        default: 0
+    },
+    basketballRating: {
+        type: Number,
+        default: 0
+    },
+    footballRating: {
+        type: Number,
+        default: 0
+    },
+    boulderingRating: {
+        type: Number,
+        default: 0
+    },
+    yogaRating: {
+        type: Number,
+        default: 0
+    },
+    volleyballRating: {
+        type: Number,
+        default: 0
+    },
+    pingpongRating: {
+        type: Number,
+        default: 0
+    },
+    runningRating: {
+        type: Number,
+        default: 0
+    }
 })
 userSchema.plugin(passportLocalMongoose);
 
