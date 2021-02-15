@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render event card correctly 1`] = `
+"<div className=\\"form-box-white thick-bottom-border\\">
+  <div className=\\"card\\" style={{...}}>
+    <div className=\\"card-body\\">
+      <h3 className=\\"event-page-event-title card-title\\" />
+      <div className=\\"bottom-border-color- row justify-content-space-between\\">
+        <div className=\\"col\\">
+          <p className=\\"card-text text-muted\\">
+            Thursday, Jan 1st
+          </p>
+          <p className=\\"card-text text-muted\\">
+            mitte
+          </p>
+        </div>
+        <div className=\\"col\\">
+          <img className=\\"event-page-sport-image\\" src=\\"../images/sport-images/.png\\" />
+        </div>
+      </div>
+      <div className=\\"row\\">
+        <p id=\\"dashboard-player\\" className=\\"col card-text text-muted player-count-text\\">
+          Players: 
+          <span className=\\"error-text\\">
+            0
+            /
+            0
+          </span>
+        </p>
+        <p id=\\"dashboard-stars\\" className=\\"col dashboard-stars\\">
+          <StarRatings rating={NaN} starRatedColor=\\"#E9B467\\" numberOfStars={5} starDimension=\\"1.2em\\" starSpacing=\\"0.7px\\" typeOfWidget=\\"Star\\" changeRating={{...}} starHoverColor=\\"rgb(230, 67, 47)\\" starEmptyColor=\\"rgb(203, 211, 227)\\" gradientPathName=\\"\\" ignoreInlineStyles={false} svgIconPath=\\"m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z\\" svgIconViewBox=\\"0 0 51 48\\" />
+        </p>
+      </div>
+      <div className=\\"accordion\\" id=\\"accordionExampleundefined\\">
+        <div className=\\"accordion-item\\">
+          <h2 className=\\"accordion-header\\" id=\\"headingundefined\\">
+            <button className=\\"accordion-button\\" type=\\"button\\" data-bs-toggle=\\"collapse\\" data-bs-target=\\"#collapseundefined\\" aria-expanded=\\"true\\" aria-controls=\\"collapseundefined\\" />
+          </h2>
+          <div id=\\"collapseundefined\\" className=\\"accordion-collapse collapse\\" aria-labelledby=\\"headingundefined\\" data-bs-parent=\\"#accordionExampleundefined\\">
+            <div className=\\"accordion-body\\">
+              <div className=\\"row justify-content-center\\">
+                <button className=\\"edit-event-button\\">
+                  <Link className=\\"edit-event-link\\" to=\\"/event/undefined\\">
+                    View Event
+                  </Link>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>"
+`;

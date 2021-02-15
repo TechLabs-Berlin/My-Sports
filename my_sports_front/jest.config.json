@@ -1,0 +1,22 @@
+{
+    "jest": {
+        "setupFilesAfterEnv": [
+            "<rootDir>/src/tests/setupTests.js"
+        ],
+        "snapshotSerialzers": [
+            "enzyme-to-json/serializer"
+        ],
+        "transform": {
+            "^.+\\.[t|j]sx?$": "babel-jest"
+        },
+        "verbose": true,
+        "testEnvironment": "enzyme",
+        "testEnvironmentOptions": {
+            "environmentAdapter": "react17"
+        },
+        "automock": false,
+        "setupFiles": [
+            "./src/tests/setupTests.js"
+        ]
+    }
+}
